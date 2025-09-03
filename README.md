@@ -74,6 +74,15 @@ pnpm install
 cd packages/demo1
 pnpm run build
 */
+// 根目录下创建git仓库
+rm -rf new-monorepo/.git  // 删除错误的 .git 目录（如果有）
+// 在项目根目录重新初始化 git 仓库
+cd /Users/sunruoshui/00-notes/0-workspace/022demos-test/new-monorepo
+git init
+
+// 添加并提交文件
+git add .
+git commit -m "init: first commit"
 
 // 先有一次 Git 提交，Lerna 才能正常发布和管理版本。
 lerna publish
